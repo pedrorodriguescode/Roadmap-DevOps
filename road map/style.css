@@ -1,0 +1,41 @@
+html, body { height: 100%; margin: 0; }
+#roadmap .row > div { 
+  transition: transform 0.3s ease;
+}
+#roadmap .row > div:nth-child(1) { transform: translateY(0px); }
+#roadmap .row > div:nth-child(2) { transform: translateY(-25px); }
+#roadmap .row > div:nth-child(3) { transform: translateY(-50px); }
+#roadmap .row > div:nth-child(4) { transform: translateY(-25px); }
+#roadmap .row > div:nth-child(5) { transform: translateY(0px); }
+#roadmap .row > div:nth-child(6) { transform: translateY(25px); }
+#roadmap .row > div:nth-child(7) { transform: translateY(50px); }
+#roadmap .row > div:nth-child(8) { transform: translateY(25px); }
+#roadmap .row.col-md-10 {
+  display: flex;
+  flex-wrap: nowrap; 
+  gap: 3rem; 
+  align-items: center;
+}
+#roadmap .row.col-md-10::after {
+  content: '';
+  position: absolute;
+  top: 50%;             
+  left: 0%;           
+  width: 400rem;          
+  height: 1px;          
+  background-color: #9ec5fe;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+#roadmap .row.col-md-10 > div {
+  position: relative;
+  z-index: 10;
+  background-color: white;
+}
+li.border-primary-subtle {          
+  border-style: solid;            
+  transition: border-width 0.3s ease; 
+  box-sizing: border-box;
+}           
+li.border-primary-subtle:hover {
+  transform: translateY(-3px);
+}
