@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 03/10/2025 às 23:51
+-- Tempo de geração: 07/10/2025 às 00:27
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -50,7 +50,12 @@ INSERT INTO `categories` (`id`, `name`, `description`, `order_number`, `progress
 (8, 'Kubernetes', 'An open-source container orchestration platform that automates deployment, scaling, and management of containerized applications.', 8, 0.00),
 (9, 'Cloud Computing (AWS)', 'A cloud platform by Amazon that provides scalable, on-demand services like computing, storage, databases, and networking over the internet.', 9, 0.00),
 (10, 'Terraform', 'An open-source Infrastructure as Code (IaC) tool by HashiCorp used to provision and manage cloud infrastructure using declarative configuration files.', 10, 0.00),
-(11, 'CI/CD And Automation', 'The practice of automating code integration, testing, and deployment to improve software delivery speed, quality, and reliability.', 11, 0.00);
+(11, 'CI/CD And Automation', 'The practice of automating code integration, testing, and deployment to improve software delivery speed, quality, and reliability.', 11, 0.00),
+(12, 'Jenkins', 'Jenkins is an open-source automation server used to build, test, and deploy software continuously. It helps automate parts of the software development process through customizable pipelines.', 12, 0.00),
+(13, 'Argo CD', 'Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes that automates application deployments and lifecycle management by syncing cluster state with Git repositories.', 13, 0.00),
+(14, 'Prometheus And Grafana', 'Prometheus: Open-source monitoring and alerting toolkit designed for reliability and scalability, using a time-series database and powerful query language (PromQL).  Grafana: Visualization and analytics platform used to create interactive dashboards and graphs from various data sources, including Prometheus.', 14, 0.00),
+(15, 'Logging (ELK Stack)', 'A powerful open-source stack (Elasticsearch, Logstash, Kibana) for collecting, processing, storing, and visualizing log data.', 15, 0.00),
+(16, 'Security (DevSecOps)', 'Integration of security practices into the DevOps process, ensuring continuous security throughout the software development lifecycle.', 16, 0.00);
 
 -- --------------------------------------------------------
 
@@ -74,7 +79,6 @@ INSERT INTO `topics` (`id`, `category_id`, `name`, `description`, `status`) VALU
 (1, 1, 'HTML', 'The standard language for creating and structuring web pages.', 'To Do'),
 (2, 1, 'CSS', 'Stylesheet language used to design and layout web pages.', 'To Do'),
 (3, 1, 'JavaScript', 'Programming language for adding interactivity to websites.', 'To Do'),
-(4, 1, 'GitHub', 'Platform for version control and collaborative code management.', 'To Do'),
 (5, 1, 'API', 'Interface that allows different software applications to communicate.', 'To Do'),
 (6, 1, 'REST', 'Architectural style for building scalable web services.', 'To Do'),
 (7, 1, 'JSON', 'Lightweight data format for exchanging information between systems.', 'To Do'),
@@ -87,7 +91,6 @@ INSERT INTO `topics` (`id`, `category_id`, `name`, `description`, `status`) VALU
 (14, 1, 'Backend', 'Server-side logic, databases, and application functionality.', 'To Do'),
 (15, 1, 'CI', 'Practice of frequently merging code changes to detect issues early.', 'To Do'),
 (16, 1, 'CD', 'Automating release of code updates to production.', 'To Do'),
-(17, 1, 'API', 'Interface that allows different software applications to communicate.', 'To Do'),
 (18, 2, 'Python', 'A high-level programming language known for simplicity and readability.', 'To Do'),
 (19, 2, 'Variables', 'Storage containers for data values used in programs.', 'To Do'),
 (20, 2, 'Conditions', 'Statements that execute code based on True/False tests.', 'To Do'),
@@ -209,7 +212,60 @@ INSERT INTO `topics` (`id`, `category_id`, `name`, `description`, `status`) VALU
 (136, 11, 'Staging', 'Pre-production setups used to validate features before going live.', 'To Do'),
 (137, 11, 'Production', 'Live systems where the application is accessed by end users.', 'To Do'),
 (138, 11, 'Monitoring', 'Tracking system performance and availability in real time.', 'To Do'),
-(139, 11, 'Alerts', 'Notifications triggered by system anomalies, failures, or threshold breaches.', 'To Do');
+(139, 11, 'Alerts', 'Notifications triggered by system anomalies, failures, or threshold breaches.', 'To Do'),
+(140, 12, 'Jenkins Master', 'The central node that manages build schedules, job configurations, and coordinates with agents.', 'To Do'),
+(141, 12, 'Jenkins Agent', 'A worker machine that executes build tasks as instructed by the Jenkins master/controller.', 'To Do'),
+(142, 12, 'Jenkinsfile', 'A text file that defines a CI/CD pipeline as code using a declarative or scripted syntax.', 'To Do'),
+(143, 12, 'Git Plugin', 'Integrates Jenkins with Git repositories, allowing it to clone code for builds and pipelines.', 'To Do'),
+(144, 12, 'SCM', 'Refers to systems like Git or SVN that track and manage changes to source code. Jenkins connects to SCMs to retrieve code.', 'To Do'),
+(145, 12, 'Webhooks', 'Automated triggers (e.g., from GitHub) that notify Jenkins to start a job when code changes occur.', 'To Do'),
+(146, 12, 'Docker Plugin', 'Allows Jenkins to use Docker containers for isolated, consistent, and reproducible build environments.', 'To Do'),
+(147, 12, 'Credentials', 'Securely stores sensitive data like tokens, SSH keys, and passwords for use in jobs and plugins.', 'To Do'),
+(148, 12, 'Build Monitoring', 'Provides logs, status indicators, and metrics to track and analyze build executions in real time.', 'To Do'),
+(149, 13, 'Argo CD Server', 'The API server that serves UI and CLI requests, managing user interactions with Argo CD.', 'To Do'),
+(150, 13, 'Controller', 'Continuously monitors Git repositories and Kubernetes clusters to ensure application state is in sync.', 'To Do'),
+(151, 13, 'Kubectl', 'The Kubernetes CLI tool used to interact with Kubernetes clusters, often alongside Argo CD.', 'To Do'),
+(152, 13, 'Argocd CLI', 'Command-line tool for managing Argo CD applications, repositories, and sync operations.', 'To Do'),
+(153, 13, 'K8s Manifests', 'Files that declare the desired state of Kubernetes resources (Pods, Services, Deployments, etc.).', 'To Do'),
+(154, 13, 'YAML', 'A human-readable data serialization format commonly used to write configuration files, including Kubernetes manifests.', 'To Do'),
+(155, 13, 'Git Repositories', 'Source of truth where application manifests are stored for Argo CD to track and deploy.', 'To Do'),
+(156, 13, 'Sync Policy', 'Defines how and when Argo CD syncs application state between Git and Kubernetes clusters.', 'To Do'),
+(157, 13, 'Health Checks', 'Automated checks that verify the status and readiness of deployed Kubernetes resources.', 'To Do'),
+(158, 13, 'RBAC', 'Controls user permissions and access levels within Argo CD for security and governance.', 'To Do'),
+(159, 13, 'UI', 'Web-based dashboard for visualizing, managing, and monitoring Argo CD applications and clusters.', 'To Do'),
+(160, 14, 'Alertmanager', 'Handles and routes alerts from Prometheus to notification services like email or Slack.', 'To Do'),
+(161, 14, 'Exporters', 'Collect and expose metrics in a Prometheus-compatible format from systems or applications.', 'To Do'),
+(162, 14, 'Node Exporter', 'Prometheus exporter that exposes hardware and OS-level metrics from Linux nodes.', 'To Do'),
+(163, 14, 'CAdvisor', 'Collects and exposes resource usage and performance metrics of running containers.', 'To Do'),
+(164, 14, 'Dashboards', 'User-defined Grafana dashboards tailored to specific monitoring needs.', 'To Do'),
+(165, 14, 'Grafana Labs', 'The company behind Grafana, offering official support, plugins, and cloud services.', 'To Do'),
+(166, 14, 'Templates', 'Pre-built Grafana dashboards shared by the open-source community.', 'To Do'),
+(167, 14, 'PromQL', 'Prometheus Query Language used to filter and analyze time-series data.', 'To Do'),
+(168, 14, 'K8s Integration', 'Enables Prometheus and Grafana to monitor Kubernetes via service discovery and exporters.', 'To Do'),
+(169, 14, 'Operator', 'Kubernetes Operator automates the deployment and management of Prometheus and Grafana.', 'To Do'),
+(170, 14, 'Alerts', 'Defined rules in Prometheus that trigger notifications when specific conditions are met.', 'To Do'),
+(171, 15, 'Elasticsearch', 'Distributed search and analytics engine for storing and indexing log data.', 'To Do'),
+(172, 15, 'Logstash', 'Data pipeline that collects, transforms, and sends logs to Elasticsearch.', 'To Do'),
+(173, 15, 'Filebeat', 'Lightweight shipper that forwards log files to Logstash or Elasticsearch.', 'To Do'),
+(174, 15, 'Kibana', 'Visualization tool for exploring and analyzing data stored in Elasticsearch.', 'To Do'),
+(175, 15, 'Dashboards', 'Customizable Kibana dashboards for visualizing log data and metrics.', 'To Do'),
+(176, 15, 'Visualizations', 'Graphs and charts in Kibana that represent log data trends and insights.', 'To Do'),
+(177, 15, 'Filters', 'Mechanisms to refine and narrow down log data views in Kibana.', 'To Do'),
+(178, 15, 'Queries', 'Search expressions to retrieve specific log data from Elasticsearch.', 'To Do'),
+(179, 15, 'App Integration', 'Connecting ELK Stack components to various applications for centralized logging.', 'To Do'),
+(180, 15, 'Alerts', 'Notifications triggered based on log patterns or threshold breaches via Elastic Alerting.', 'To Do'),
+(181, 15, 'Elastic Plugins', 'Pre-built connectors that simplify integrating Elastic Stack with external data sources and services.', 'To Do'),
+(182, 16, 'App Risks', 'Weaknesses in software that can be exploited to compromise security.', 'To Do'),
+(183, 16, 'Code Scanning', 'Automated analysis of source code to detect security flaws and bugs early.', 'To Do'),
+(184, 16, 'Secure Secrets', 'Secure handling of passwords, certificates, and API keys to prevent unauthorized access.', 'To Do'),
+(185, 16, 'Passwords', 'Confidential strings used for authentication to protect access to systems and data.', 'To Do'),
+(186, 16, 'Certificates', 'Digital documents that verify identities and enable secure, encrypted communications.', 'To Do'),
+(187, 16, 'Container Sec', 'Practices and tools to protect containerized applications from threats and breaches.', 'To Do'),
+(188, 16, 'Snyk', 'Security platform that scans code and dependencies for vulnerabilities and helps fix them.', 'To Do'),
+(189, 16, 'SonarQube', 'Tool for continuous inspection of code quality and detection of security issues.', 'To Do'),
+(190, 16, 'HashiCorp Vault', 'Tool for managing secrets, encryption keys, and access to sensitive data securely.', 'To Do'),
+(191, 16, 'Falco', 'Runtime security tool that detects anomalous behavior in containers and hosts.', 'To Do'),
+(192, 16, 'Runtime ', 'Protection mechanisms that monitor and defend applications during execution.', 'To Do');
 
 --
 -- Índices para tabelas despejadas
@@ -235,13 +291,13 @@ ALTER TABLE `topics`
 -- AUTO_INCREMENT de tabela `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT de tabela `topics`
 --
 ALTER TABLE `topics`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=140;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=193;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
