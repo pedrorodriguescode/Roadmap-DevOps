@@ -10,7 +10,9 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Roadmap -->
   <div id="roadmap" class="container-fluid align-items-center justify-content-center d-flex h-100">
+    <button onclick="listening()">Listen</button>
     <div class="row col-md-10 p-4">
       <?php
         include "connect.php";
@@ -18,9 +20,9 @@
         while ($row = mysqli_fetch_array($categoriesSelect)) {
           if ($row != 0) {
             $topicsSelect = mysqli_query($mysqlicon, "SELECT id, name, status, category_id FROM topics WHERE (category_id='" .$row['id'] . "')");
-            echo '<div class="col-md-3 m-2 p-2 d-flex flex-column border shadow rounded border-primary-subtle"><b class="text-center w-100 d-block mb-1">'. $row['order_number'] . '. ' . $row['name'] . '</b><ul class="m-0 p-0 w-100" style="list-style:none; display:grid; grid-template-columns:repeat(2,1fr); gap:0px;">';
+            echo '<div class="col-md-3 m-2 p-2 d-flex flex-column border shadow rounded border-primary-subtle"><b class="text-center w-100 d-block mb-1 border-primary-subtle">'. $row['order_number'] . '. ' . $row['name'] . '</b><ul class="m-0 p-0 w-100" style="list-style:none; display:grid; grid-template-columns:repeat(2,1fr); gap:0px;">';
             while ($row1 = mysqli_fetch_array($topicsSelect)) {
-              echo '<li style="font-size:12px;cursor: pointer;" data-topic-id="' . $row1['id'] . '" data-bs-toggle="modal" data-bs-target="#exampleModal" class="mb-1 px-1 mx-1 border rounded border-primary-subtle">'. $row1['name'] .'</li>';
+              echo '<li style="font-size:12px;cursor: pointer;" data-topic-id="' . $row1['id'] . '" data-bs-toggle="modal" data-bs-target="#exampleModal" class="mb-1 px-1 mx-1 border rounded border-primary-subtle">'.'📝 '. $row1['name'] .'</li>';
             }
             echo '</ul></div>';
           }
@@ -33,7 +35,7 @@
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel"</h5>
+          <h5 class="modal-title" id="exampleModalLabel"></h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body"></div>

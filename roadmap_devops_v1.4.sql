@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 07/10/2025 às 00:27
+-- Tempo de geração: 09/10/2025 às 22:36
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -76,13 +76,13 @@ CREATE TABLE `topics` (
 --
 
 INSERT INTO `topics` (`id`, `category_id`, `name`, `description`, `status`) VALUES
-(1, 1, 'HTML', 'The standard language for creating and structuring web pages.', 'To Do'),
+(1, 1, 'HTML', 'The standard language for creating and structuring web pages.', 'Done'),
 (2, 1, 'CSS', 'Stylesheet language used to design and layout web pages.', 'To Do'),
 (3, 1, 'JavaScript', 'Programming language for adding interactivity to websites.', 'To Do'),
-(5, 1, 'API', 'Interface that allows different software applications to communicate.', 'To Do'),
+(5, 1, 'API', 'Interface that allows different software applications to communicate.', 'Done'),
 (6, 1, 'REST', 'Architectural style for building scalable web services.', 'To Do'),
 (7, 1, 'JSON', 'Lightweight data format for exchanging information between systems.', 'To Do'),
-(8, 1, 'Agile ', 'Approaches for iterative and adaptive project management.', 'To Do'),
+(8, 1, 'Agile ', 'Approaches for iterative and adaptive project management.', 'Done'),
 (9, 1, 'Scrum', 'Agile framework focused on time-boxed sprints and team collaboration.', 'To Do'),
 (10, 1, 'Kanban', 'Agile method visualizing tasks to improve workflow efficiency.', 'To Do'),
 (11, 1, 'Trello', 'Visual tool for managing tasks and project boards.', 'To Do'),
@@ -128,7 +128,7 @@ INSERT INTO `topics` (`id`, `category_id`, `name`, `description`, `status`) VALU
 (52, 4, 'ISO', 'An ISO is a disk image file used to install an operating system like Ubuntu.', 'To Do'),
 (53, 4, 'Remote Access', 'ssh connects to remote systems securely; scp copies files over a secure connection.', 'To Do'),
 (54, 5, 'GitHub', 'A popular web-based platform for hosting Git repositories and collaborating on projects.', 'To Do'),
-(55, 5, 'GitLab/Bitbucket', 'Alternative web platforms for Git repository hosting with additional CI/CD and project management features.', 'To Do'),
+(55, 5, 'GLab/Bitbucket', 'Alternative web platforms for Git repository hosting with additional CI/CD and project management features.', 'To Do'),
 (56, 5, 'Commands', 'Basic Git commands include git init, git clone, git add, git commit, and git push for version control.', 'To Do'),
 (57, 5, 'Gitignore', 'A file specifying which files or directories Git should ignore and not track.', 'To Do'),
 (58, 5, 'Desktop/Kraken', 'Git clients with graphical interfaces that simplify repository management and version control.', 'To Do'),
@@ -207,7 +207,7 @@ INSERT INTO `topics` (`id`, `category_id`, `name`, `description`, `status`) VALU
 (131, 11, 'CI/CD Pipeline', 'A series of automated steps to build, test, and deploy applications continuously.', 'To Do'),
 (132, 11, 'Build', 'The process of compiling source code into executable software packages.', 'To Do'),
 (133, 11, 'Versioning', 'Managing changes in code using version control systems like Git.', 'To Do'),
-(134, 11, 'Test Automation', 'Automatically running tests to validate code changes and prevent regressions.', 'To Do'),
+(134, 11, 'Auto Tests', 'Automatically running tests to validate code changes and prevent regressions.', 'To Do'),
 (135, 11, 'Deployment', 'Pushing applications to environments without manual intervention.', 'To Do'),
 (136, 11, 'Staging', 'Pre-production setups used to validate features before going live.', 'To Do'),
 (137, 11, 'Production', 'Live systems where the application is accessed by end users.', 'To Do'),
@@ -221,7 +221,7 @@ INSERT INTO `topics` (`id`, `category_id`, `name`, `description`, `status`) VALU
 (145, 12, 'Webhooks', 'Automated triggers (e.g., from GitHub) that notify Jenkins to start a job when code changes occur.', 'To Do'),
 (146, 12, 'Docker Plugin', 'Allows Jenkins to use Docker containers for isolated, consistent, and reproducible build environments.', 'To Do'),
 (147, 12, 'Credentials', 'Securely stores sensitive data like tokens, SSH keys, and passwords for use in jobs and plugins.', 'To Do'),
-(148, 12, 'Build Monitoring', 'Provides logs, status indicators, and metrics to track and analyze build executions in real time.', 'To Do'),
+(148, 12, 'Build Watch', 'Provides logs, status indicators, and metrics to track and analyze build executions in real time.', 'To Do'),
 (149, 13, 'Argo CD Server', 'The API server that serves UI and CLI requests, managing user interactions with Argo CD.', 'To Do'),
 (150, 13, 'Controller', 'Continuously monitors Git repositories and Kubernetes clusters to ensure application state is in sync.', 'To Do'),
 (151, 13, 'Kubectl', 'The Kubernetes CLI tool used to interact with Kubernetes clusters, often alongside Argo CD.', 'To Do'),

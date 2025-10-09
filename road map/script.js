@@ -13,3 +13,31 @@ document.addEventListener('click', function(e) {
     })
   }
 });
+
+
+function listening() {
+  var recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+  recognition.lang = 'en-US';
+  recognition.interimResults = false;
+  recognition.maxAlternatives = 1;
+
+  recognition.start();
+
+  recognition.onresult = function(event) {
+    var voiceToText = event.results[0][0].transcript;
+    console.log('Recognized speech: ' + voiceToText);
+    console.log("Chamando o PHP...");
+
+    fetch('process_voice.php', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+    body: 'voiceToText=' + encodeURIComponent(voiceToText)
+    })
+
+    .then(res => res.json())
+    .then(data => {
+      console.log("Resposta do PHP:", data);
+    });
+    
+  };
+}
