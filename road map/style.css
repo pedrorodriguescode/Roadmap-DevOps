@@ -50,3 +50,9 @@ li.border-primary-subtle {
 li.border-primary-subtle:hover {
   transform: translateY(-3px);
 }
+#user-guide {
+  position: fixed;
+  top: 20vh;
+  left: 0;
+  transform: translateY(-50%);
+}

@@ -14,8 +14,6 @@ document.addEventListener('click', function(e) {
   }
 });
 
-
-
 var recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
 recognition.lang = 'en-US';
 recognition.interimResults = false;
@@ -29,7 +27,6 @@ window.addEventListener('keydown', function(e) {
   }
 });
 
-
 window.addEventListener('keyup', function(e) {
   if (e.key === 'Shift' && isRecognizing) {
     recognition.stop();
@@ -37,28 +34,33 @@ window.addEventListener('keyup', function(e) {
   }
 });
 
-
 recognition.onresult = function(event) {
-var voiceToText = event.results[0][0].transcript;
-console.log('Recognized speech: ' + voiceToText);
-console.log("Chamando o PHP...");
+  var voiceToText = event.results[0][0].transcript;
+  console.log('Recognized speech: ' + voiceToText);
 
-fetch('process_voice.php', {
-method: 'POST',
-headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-body: 'voiceToText=' + encodeURIComponent(voiceToText)
-})
-
-.then(res => res.json())
-.then(data => {
-  console.log("Resposta do PHP:", data);
-  console.log('data.reload:', data.reload);
-  if (data.reload) {
-    setTimeout(() => {
-      location.reload();
-    }, 1000);
-  }
-});
-
+  fetch('process_voice.php', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+    body: 'voiceToText=' + encodeURIComponent(voiceToText)
+  })
+  .then(res => res.json())
+  .then(data => {
+    console.log(data);
+    var utterance = new SpeechSynthesisUtterance(data.message);
+    utterance.lang = 'en-GB';
+    speechSynthesis.speak(utterance);
+    var estimatedTime = data.message.length * 150; // Estimate 150ms per character
+    if (data.message.includes('has been marked') || data.message.includes('has been unmarked')) {
+      setTimeout(() => {
+        console.log('Reloading after speech...');
+        window.location.href = window.location.href;
+      }, estimatedTime);
+    }
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
 };
+
+
 

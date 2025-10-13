@@ -10,6 +10,13 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- User-Guide -->
+  <div id="user-guide" class="container-fluid justify-content-center d-flex">
+    <h3>
+      Press <kbd>Shift</kbd> and say a command like: <i>mark 1.1, unmark HTML, or read 1.1</i>
+    </h3>
+  </div>
+  </div>
   <!-- Roadmap -->
   <div id="roadmap" class="container-fluid align-items-center justify-content-center d-flex h-100">
     <div class="row col-md-10 p-4">
@@ -19,15 +26,15 @@
         while ($row = mysqli_fetch_array($categoriesSelect)) {
           if ($row != 0) {
             $topicsSelect = mysqli_query($mysqlicon, "SELECT id, name, status, category_id FROM topics WHERE (category_id='" .$row['id'] . "')");
-            echo '<div class="col-md-4 m-2 p-2 d-flex flex-column border shadow rounded border-primary-subtle"><b class="text-center w-100 d-block mb-1 border-primary-subtle">'. $row['order_number'] . '. ' . $row['name'] . '</b><ul class="m-0 p-0 w-100" style="list-style:none; display:grid; grid-template-columns:repeat(2,1fr); gap:0px;">';
+            echo '<div class="col-md-3 m-2 p-2 d-flex flex-column border shadow rounded border-primary-subtle"><b class="text-center w-100 d-block mb-1 border-primary-subtle">'. $row['order_number'] . '. ' . $row['name'] . '</b><ul class="m-0 p-0 w-100" style="list-style:none; display:grid; grid-template-columns:repeat(2,1fr); gap:0px;">';
             $topicCount = 0;
             while ($row1 = mysqli_fetch_array($topicsSelect)) {
-              echo '<li style="font-size:12px;cursor: pointer;" data-topic-id="' . $row1['id'] . '" data-bs-toggle="modal" data-bs-target="#exampleModal" class="mb-1 px-1 mx-1 border rounded border-primary-subtle">';
+              echo '<li style="font-size:10px;cursor: pointer;" data-topic-id="' . $row1['id'] . '" data-bs-toggle="modal" data-bs-target="#exampleModal" class="mb-1 px-1 mx-1 border rounded border-primary-subtle">';
               $topicCount++;
               if ($row1['status'] == 'Done') {
-                echo '✅  ' . $topicCount . '. ';
+                echo '✅  ' . ($topicCount < 10 ? '0' : '') . $topicCount . '. ';
               } else {
-                echo '📝  ' . $topicCount . '. ';
+                echo '📝  ' . ($topicCount < 10 ? '0' : '') . $topicCount . '. ';
               } 
               echo $row1['name'] .'</li>';
             }
