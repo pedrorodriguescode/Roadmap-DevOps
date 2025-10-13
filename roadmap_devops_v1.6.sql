@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 09/10/2025 às 22:36
+-- Tempo de geração: 14/10/2025 às 00:29
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -76,13 +76,13 @@ CREATE TABLE `topics` (
 --
 
 INSERT INTO `topics` (`id`, `category_id`, `name`, `description`, `status`) VALUES
-(1, 1, 'HTML', 'The standard language for creating and structuring web pages.', 'Done'),
+(1, 1, 'HTML', 'The standard language for creating and structuring web pages.', 'To Do'),
 (2, 1, 'CSS', 'Stylesheet language used to design and layout web pages.', 'To Do'),
 (3, 1, 'JavaScript', 'Programming language for adding interactivity to websites.', 'To Do'),
-(5, 1, 'API', 'Interface that allows different software applications to communicate.', 'Done'),
+(5, 1, 'API', 'Interface that allows different software applications to communicate.', 'To Do'),
 (6, 1, 'REST', 'Architectural style for building scalable web services.', 'To Do'),
 (7, 1, 'JSON', 'Lightweight data format for exchanging information between systems.', 'To Do'),
-(8, 1, 'Agile ', 'Approaches for iterative and adaptive project management.', 'Done'),
+(8, 1, 'Agile ', 'Approaches for iterative and adaptive project management.', 'To Do'),
 (9, 1, 'Scrum', 'Agile framework focused on time-boxed sprints and team collaboration.', 'To Do'),
 (10, 1, 'Kanban', 'Agile method visualizing tasks to improve workflow efficiency.', 'To Do'),
 (11, 1, 'Trello', 'Visual tool for managing tasks and project boards.', 'To Do'),
@@ -104,14 +104,14 @@ INSERT INTO `topics` (`id`, `category_id`, `name`, `description`, `status`) VALU
 (28, 2, 'Input/output', 'Methods for receiving data from users and displaying results.', 'To Do'),
 (29, 3, 'OS', 'Main software that manages hardware and allows other programs to run.', 'To Do'),
 (30, 3, 'Terminal', 'Text-based interface used to execute commands directly in the system.', 'To Do'),
-(31, 3, 'Files/Directories', 'Files store data; directories organize them in a hierarchical structure.', 'To Do'),
+(31, 3, 'Files/Dirs', 'Files store data; directories organize them in a hierarchical structure.', 'To Do'),
 (32, 3, 'Servers', 'Computers or programs that provide services or resources to other devices on a network.', 'To Do'),
 (33, 3, 'Network', 'A group of connected devices that exchange data.', 'To Do'),
 (34, 3, 'IP', 'A unique identifier for each device on a network.', 'To Do'),
 (35, 3, 'Router', 'Device that directs data between networks and connects devices to the internet.', 'To Do'),
 (36, 3, 'Internet', 'A global network that connects millions of devices for communication and data exchange.', 'To Do'),
 (37, 3, 'DNS', 'Translates website names into IP addresses.', 'To Do'),
-(38, 3, 'Client vs Server', 'The client makes requests; the server responds with data or services.', 'To Do'),
+(38, 3, 'User vs Server', 'The client makes requests; the server responds with data or services.', 'To Do'),
 (39, 3, 'Processes', 'Programs that are currently running on the system.', 'To Do'),
 (40, 3, 'Memory', 'Temporary space (RAM) used to store data and instructions for running processes.', 'To Do'),
 (41, 4, 'Ubuntu/Debian', 'Linux-based operating systems known for stability, open-source support, and package management via APT.', 'To Do'),

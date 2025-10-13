@@ -24,7 +24,7 @@ html, body { height: 100%; margin: 0; }
 #roadmap .row.col-md-10 {
   display: flex;
   flex-wrap: nowrap; 
-  gap: 3rem; 
+  gap: 4rem; 
   align-items: center;
 }
 #roadmap .row.col-md-10::after {
@@ -32,7 +32,7 @@ html, body { height: 100%; margin: 0; }
   position: absolute;
   top: 50%;             
   left: 0%;           
-  width: 400rem;          
+  width: 500rem;          
   height: 1px;          
   background-color: #9ec5fe;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
