@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 14/10/2025 às 00:29
+-- Tempo de geração: 18/10/2025 às 03:28
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -31,31 +31,30 @@ CREATE TABLE `categories` (
   `id` int(50) NOT NULL,
   `name` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `description` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `order_number` int(11) NOT NULL,
-  `progress` decimal(5,2) NOT NULL
+  `order_number` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Despejando dados para a tabela `categories`
 --
 
-INSERT INTO `categories` (`id`, `name`, `description`, `order_number`, `progress`) VALUES
-(1, 'Software World', 'Software World covers software development and operations, combining frontend (HTML, CSS, JavaScript) and backend (data processing and APIs). It includes code versioning (GitHub), agile methodologies (Scrum, Kanban), management tools (Trello, Jira), and CI/CD for delivery automation, combining creativity, logic, and collaboration to create functional and scalable applications.', 1, 0.00),
-(2, 'Programming Logic', 'Programming logic is the process of using clear, step-by-step instructions and reasoning to solve problems and create efficient programs.', 2, 0.00),
-(3, 'Computing And Networks', 'Computing and Networks refers to the study and use of computer systems and the communication between devices through networks to share data and resources efficiently.', 3, 0.00),
-(4, 'Linux', 'Linux is an open-source operating system based on Unix, widely used for servers, desktops, and embedded systems. It is known for its stability, security, and flexibility.', 4, 0.00),
-(5, 'GIT', 'Git is a distributed version control system used to track changes in source code during software development. It allows multiple developers to collaborate efficiently by managing code history and branches.', 5, 0.00),
-(6, 'Network And Security', 'Network and Security refers to the practice of designing, managing, and protecting computer networks to ensure secure, reliable data communication. It involves tools, protocols, and policies to prevent unauthorized access, attacks, and data breaches.', 6, 0.00),
-(7, 'Docker', 'A platform that uses containerization to package applications and their dependencies into isolated environments for consistent deployment.', 7, 0.00),
-(8, 'Kubernetes', 'An open-source container orchestration platform that automates deployment, scaling, and management of containerized applications.', 8, 0.00),
-(9, 'Cloud Computing (AWS)', 'A cloud platform by Amazon that provides scalable, on-demand services like computing, storage, databases, and networking over the internet.', 9, 0.00),
-(10, 'Terraform', 'An open-source Infrastructure as Code (IaC) tool by HashiCorp used to provision and manage cloud infrastructure using declarative configuration files.', 10, 0.00),
-(11, 'CI/CD And Automation', 'The practice of automating code integration, testing, and deployment to improve software delivery speed, quality, and reliability.', 11, 0.00),
-(12, 'Jenkins', 'Jenkins is an open-source automation server used to build, test, and deploy software continuously. It helps automate parts of the software development process through customizable pipelines.', 12, 0.00),
-(13, 'Argo CD', 'Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes that automates application deployments and lifecycle management by syncing cluster state with Git repositories.', 13, 0.00),
-(14, 'Prometheus And Grafana', 'Prometheus: Open-source monitoring and alerting toolkit designed for reliability and scalability, using a time-series database and powerful query language (PromQL).  Grafana: Visualization and analytics platform used to create interactive dashboards and graphs from various data sources, including Prometheus.', 14, 0.00),
-(15, 'Logging (ELK Stack)', 'A powerful open-source stack (Elasticsearch, Logstash, Kibana) for collecting, processing, storing, and visualizing log data.', 15, 0.00),
-(16, 'Security (DevSecOps)', 'Integration of security practices into the DevOps process, ensuring continuous security throughout the software development lifecycle.', 16, 0.00);
+INSERT INTO `categories` (`id`, `name`, `description`, `order_number`) VALUES
+(1, 'Software World', 'Software World covers software development and operations, combining frontend (HTML, CSS, JavaScript) and backend (data processing and APIs). It includes code versioning (GitHub), agile methodologies (Scrum, Kanban), management tools (Trello, Jira), and CI/CD for delivery automation, combining creativity, logic, and collaboration to create functional and scalable applications.', 1),
+(2, 'Programming Logic', 'Programming logic is the process of using clear, step-by-step instructions and reasoning to solve problems and create efficient programs.', 2),
+(3, 'Computing And Networks', 'Computing and Networks refers to the study and use of computer systems and the communication between devices through networks to share data and resources efficiently.', 3),
+(4, 'Linux', 'Linux is an open-source operating system based on Unix, widely used for servers, desktops, and embedded systems. It is known for its stability, security, and flexibility.', 4),
+(5, 'GIT', 'Git is a distributed version control system used to track changes in source code during software development. It allows multiple developers to collaborate efficiently by managing code history and branches.', 5),
+(6, 'Network And Security', 'Network and Security refers to the practice of designing, managing, and protecting computer networks to ensure secure, reliable data communication. It involves tools, protocols, and policies to prevent unauthorized access, attacks, and data breaches.', 6),
+(7, 'Docker', 'A platform that uses containerization to package applications and their dependencies into isolated environments for consistent deployment.', 7),
+(8, 'Kubernetes', 'An open-source container orchestration platform that automates deployment, scaling, and management of containerized applications.', 8),
+(9, 'Cloud Computing (AWS)', 'A cloud platform by Amazon that provides scalable, on-demand services like computing, storage, databases, and networking over the internet.', 9),
+(10, 'Terraform', 'An open-source Infrastructure as Code (IaC) tool by HashiCorp used to provision and manage cloud infrastructure using declarative configuration files.', 10),
+(11, 'CI/CD And Automation', 'The practice of automating code integration, testing, and deployment to improve software delivery speed, quality, and reliability.', 11),
+(12, 'Jenkins', 'Jenkins is an open-source automation server used to build, test, and deploy software continuously. It helps automate parts of the software development process through customizable pipelines.', 12),
+(13, 'Argo CD', 'Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes that automates application deployments and lifecycle management by syncing cluster state with Git repositories.', 13),
+(14, 'Prometheus And Grafana', 'Prometheus: Open-source monitoring and alerting toolkit designed for reliability and scalability, using a time-series database and powerful query language (PromQL).  Grafana: Visualization and analytics platform used to create interactive dashboards and graphs from various data sources, including Prometheus.', 14),
+(15, 'Logging (ELK Stack)', 'A powerful open-source stack (Elasticsearch, Logstash, Kibana) for collecting, processing, storing, and visualizing log data.', 15),
+(16, 'Security (DevSecOps)', 'Integration of security practices into the DevOps process, ensuring continuous security throughout the software development lifecycle.', 16);
 
 -- --------------------------------------------------------
 
@@ -76,9 +75,9 @@ CREATE TABLE `topics` (
 --
 
 INSERT INTO `topics` (`id`, `category_id`, `name`, `description`, `status`) VALUES
-(1, 1, 'HTML', 'The standard language for creating and structuring web pages.', 'To Do'),
-(2, 1, 'CSS', 'Stylesheet language used to design and layout web pages.', 'To Do'),
-(3, 1, 'JavaScript', 'Programming language for adding interactivity to websites.', 'To Do'),
+(1, 1, 'HTML', 'The standard language for creating and structuring web pages.', 'Done'),
+(2, 1, 'CSS', 'Stylesheet language used to design and layout web pages.', 'Done'),
+(3, 1, 'JavaScript', 'Programming language for adding interactivity to websites.', 'Done'),
 (5, 1, 'API', 'Interface that allows different software applications to communicate.', 'To Do'),
 (6, 1, 'REST', 'Architectural style for building scalable web services.', 'To Do'),
 (7, 1, 'JSON', 'Lightweight data format for exchanging information between systems.', 'To Do'),
@@ -87,8 +86,8 @@ INSERT INTO `topics` (`id`, `category_id`, `name`, `description`, `status`) VALU
 (10, 1, 'Kanban', 'Agile method visualizing tasks to improve workflow efficiency.', 'To Do'),
 (11, 1, 'Trello', 'Visual tool for managing tasks and project boards.', 'To Do'),
 (12, 1, 'Jira', 'Platform for tracking issues, bugs, and agile project management.', 'To Do'),
-(13, 1, 'Frontend', 'Part of a website or app that users interact with directly.', 'To Do'),
-(14, 1, 'Backend', 'Server-side logic, databases, and application functionality.', 'To Do'),
+(13, 1, 'Frontend', 'Part of a website or app that users interact with directly.', 'Done'),
+(14, 1, 'Backend', 'Server-side logic, databases, and application functionality.', 'Done'),
 (15, 1, 'CI', 'Practice of frequently merging code changes to detect issues early.', 'To Do'),
 (16, 1, 'CD', 'Automating release of code updates to production.', 'To Do'),
 (18, 2, 'Python', 'A high-level programming language known for simplicity and readability.', 'To Do'),

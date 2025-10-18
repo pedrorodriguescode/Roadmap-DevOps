@@ -32,7 +32,7 @@ html, body { height: 100%; margin: 0; }
   position: absolute;
   top: 50%;             
   left: 0%;           
-  width: 400rem;          
+  width: 450rem;          
   height: 1px;          
   background-color: #9ec5fe;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
@@ -52,7 +52,44 @@ li.border-primary-subtle:hover {
 }
 #user-guide {
   position: fixed;
-  top: 20vh;
+  top: 17vh;
   left: 0;
   transform: translateY(-50%);
+}
+
+.circle {
+  background: conic-gradient( #9ec5fe 20deg, rgb(255, 255, 255) 0deg);
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #9ec5fe;
+}
+
+.circle::before {
+  content: "";
+  height: 40px;
+  width: 40px;
+  background-color: white;
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid #9ec5fe;
+}
+
+.value {
+  position: relative;
+  font-size: 13px;
+  font-family: sans-serif;
+}
+
+.category-circle {
+  height: 24px;
+  width: 24px;
+}
+
+.category-circle::before {
+  height: 10px;
+  width: 10px;
 }

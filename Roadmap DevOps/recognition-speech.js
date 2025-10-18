@@ -1,19 +1,3 @@
-document.addEventListener('click', function(e) {
-  var topic_id = e.target.getAttribute('data-topic-id');
-  if (topic_id !== null) {
-    fetch('process.php', {
-      method: 'POST',
-      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-      body: 'topic_id=' + encodeURIComponent(topic_id)
-    })
-    .then(response => response.json())
-    .then(data => {
-      document.getElementById('exampleModalLabel').textContent = data.name;
-      document.querySelector('#exampleModal .modal-body').textContent = data.description;
-    })
-  }
-});
-
 var recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
 recognition.lang = 'en-US';
 recognition.interimResults = false;
@@ -38,14 +22,14 @@ recognition.onresult = function(event) {
   var voiceToText = event.results[0][0].transcript;
   console.log('Recognized speech: ' + voiceToText);
 
-  fetch('process_voice.php', {
+  fetch('process-voice.php', {
     method: 'POST',
     headers: {'Content-Type': 'application/x-www-form-urlencoded'},
     body: 'voiceToText=' + encodeURIComponent(voiceToText)
   })
   .then(res => res.json())
   .then(data => {
-    console.log(data);
+    console.log('Server response:', data);
     var utterance = new SpeechSynthesisUtterance(data.message);
     utterance.lang = 'en-GB';
     speechSynthesis.speak(utterance);
@@ -61,6 +45,3 @@ recognition.onresult = function(event) {
     console.error('Error:', error);
   });
 };
-
-
-
