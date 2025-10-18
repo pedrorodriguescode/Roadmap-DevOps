@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    fetch('process-progress-circle.php', {
+    fetch('../backend/process-progress-circle.php', {
         method: 'POST',
         headers: {'Content-Type': 'application/x-www-form-urlencoded'}
     })

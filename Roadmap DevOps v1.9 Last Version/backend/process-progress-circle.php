@@ -1,5 +1,5 @@
 <?php
-include "connect.php";
+include "../backend/connect.php";
 
 $query = mysqli_query($mysqlicon, "SELECT COUNT(*) AS topicCount, SUM(status='Done') AS doneCount FROM topics");
 $row = mysqli_fetch_array($query);

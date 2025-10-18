@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 18/10/2025 às 03:28
+-- Tempo de geração: 19/10/2025 às 00:06
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -54,7 +54,8 @@ INSERT INTO `categories` (`id`, `name`, `description`, `order_number`) VALUES
 (13, 'Argo CD', 'Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes that automates application deployments and lifecycle management by syncing cluster state with Git repositories.', 13),
 (14, 'Prometheus And Grafana', 'Prometheus: Open-source monitoring and alerting toolkit designed for reliability and scalability, using a time-series database and powerful query language (PromQL).  Grafana: Visualization and analytics platform used to create interactive dashboards and graphs from various data sources, including Prometheus.', 14),
 (15, 'Logging (ELK Stack)', 'A powerful open-source stack (Elasticsearch, Logstash, Kibana) for collecting, processing, storing, and visualizing log data.', 15),
-(16, 'Security (DevSecOps)', 'Integration of security practices into the DevOps process, ensuring continuous security throughout the software development lifecycle.', 16);
+(16, 'Security (DevSecOps)', 'Integration of security practices into the DevOps process, ensuring continuous security throughout the software development lifecycle.', 16),
+(17, 'Intermediate English', 'Improve your grammar, vocabulary, and speaking skills to confidently handle everyday conversations and written communication in English.', 17);
 
 -- --------------------------------------------------------
 
@@ -75,9 +76,9 @@ CREATE TABLE `topics` (
 --
 
 INSERT INTO `topics` (`id`, `category_id`, `name`, `description`, `status`) VALUES
-(1, 1, 'HTML', 'The standard language for creating and structuring web pages.', 'Done'),
-(2, 1, 'CSS', 'Stylesheet language used to design and layout web pages.', 'Done'),
-(3, 1, 'JavaScript', 'Programming language for adding interactivity to websites.', 'Done'),
+(1, 1, 'HTML', 'The standard language for creating and structuring web pages.', 'To Do'),
+(2, 1, 'CSS', 'Stylesheet language used to design and layout web pages.', 'To Do'),
+(3, 1, 'JavaScript', 'Programming language for adding interactivity to websites.', 'To Do'),
 (5, 1, 'API', 'Interface that allows different software applications to communicate.', 'To Do'),
 (6, 1, 'REST', 'Architectural style for building scalable web services.', 'To Do'),
 (7, 1, 'JSON', 'Lightweight data format for exchanging information between systems.', 'To Do'),
@@ -86,8 +87,8 @@ INSERT INTO `topics` (`id`, `category_id`, `name`, `description`, `status`) VALU
 (10, 1, 'Kanban', 'Agile method visualizing tasks to improve workflow efficiency.', 'To Do'),
 (11, 1, 'Trello', 'Visual tool for managing tasks and project boards.', 'To Do'),
 (12, 1, 'Jira', 'Platform for tracking issues, bugs, and agile project management.', 'To Do'),
-(13, 1, 'Frontend', 'Part of a website or app that users interact with directly.', 'Done'),
-(14, 1, 'Backend', 'Server-side logic, databases, and application functionality.', 'Done'),
+(13, 1, 'Frontend', 'Part of a website or app that users interact with directly.', 'To Do'),
+(14, 1, 'Backend', 'Server-side logic, databases, and application functionality.', 'To Do'),
 (15, 1, 'CI', 'Practice of frequently merging code changes to detect issues early.', 'To Do'),
 (16, 1, 'CD', 'Automating release of code updates to production.', 'To Do'),
 (18, 2, 'Python', 'A high-level programming language known for simplicity and readability.', 'To Do'),
@@ -264,7 +265,27 @@ INSERT INTO `topics` (`id`, `category_id`, `name`, `description`, `status`) VALU
 (189, 16, 'SonarQube', 'Tool for continuous inspection of code quality and detection of security issues.', 'To Do'),
 (190, 16, 'HashiCorp Vault', 'Tool for managing secrets, encryption keys, and access to sensitive data securely.', 'To Do'),
 (191, 16, 'Falco', 'Runtime security tool that detects anomalous behavior in containers and hosts.', 'To Do'),
-(192, 16, 'Runtime ', 'Protection mechanisms that monitor and defend applications during execution.', 'To Do');
+(192, 16, 'Runtime ', 'Protection mechanisms that monitor and defend applications during execution.', 'To Do'),
+(193, 17, 'Past vs. Present', 'Use Past Simple and Present Perfect to talk about past events.', 'To Do'),
+(194, 17, 'Future Forms', 'Use will, going to, and present continuous for future actions.', 'To Do'),
+(195, 17, 'Conditionals', 'Practice 0, 1st, and 2nd conditionals in real situations.', 'To Do'),
+(196, 17, 'Modal Verbs', 'Use can, could, should, must, might to express ideas.', 'To Do'),
+(197, 17, 'Comparatives', 'Compare people, places, and things using comparatives.', 'To Do'),
+(198, 17, 'Gerunds & Inf', 'Learn when to use verb+ing or to+verb after common verbs.', 'To Do'),
+(199, 17, 'Rel. Clauses', 'Use who, which, that to add information about nouns.', 'To Do'),
+(200, 17, 'Passive Voice', 'Understand the passive voice and reported speech basics.', 'To Do'),
+(201, 17, 'Past & Plans', 'Talk about past experiences and future plans with correct tenses.', 'To Do'),
+(202, 17, 'Giving Advice', 'Give opinions and advice using should and polite expressions.', 'To Do'),
+(203, 17, 'Writing Basics', 'Practice writing short texts, emails, and journal entries.', 'To Do'),
+(204, 17, 'Requests', 'Make polite requests and express complaints clearly.', 'To Do'),
+(205, 17, 'Daily Vocab 1', 'Vocabulary for routines, food, travel, and daily situations.', 'To Do'),
+(206, 17, 'Daily Vocab 2', 'Vocabulary about health, tech, emotions, and entertainment.', 'To Do'),
+(207, 17, 'Listening 1', 'Understand main ideas in conversations and instructions.', 'To Do'),
+(208, 17, 'Listening 2', 'Practice listening with podcasts, videos, and series.', 'To Do'),
+(209, 17, 'Tech Terms', 'Learn essential IT terms used in tech work.', 'To Do'),
+(210, 17, 'IT in Context', 'Use English in meetings, support, and development tasks.', 'To Do'),
+(211, 17, 'Emails & Docs', 'Write clear emails and reports in IT settings.', 'To Do'),
+(212, 17, 'Job Interviews', 'Prepare for IT job interviews with key questions and answers.', 'To Do');
 
 --
 -- Índices para tabelas despejadas
@@ -290,13 +311,13 @@ ALTER TABLE `topics`
 -- AUTO_INCREMENT de tabela `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de tabela `topics`
 --
 ALTER TABLE `topics`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=193;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=213;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

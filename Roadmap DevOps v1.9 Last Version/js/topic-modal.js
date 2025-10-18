@@ -1,7 +1,7 @@
 document.addEventListener('click', function(e) {
   var topic_id = e.target.getAttribute('data-topic-id');
   if (topic_id !== null) {
-    fetch('process-topic-modal.php', {
+    fetch('../backend/process-topic-modal.php', {
       method: 'POST',
       headers: {'Content-Type': 'application/x-www-form-urlencoded'},
       body: 'topic_id=' + encodeURIComponent(topic_id)

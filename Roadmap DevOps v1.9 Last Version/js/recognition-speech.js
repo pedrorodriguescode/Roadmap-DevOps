@@ -22,7 +22,7 @@ recognition.onresult = function(event) {
   var voiceToText = event.results[0][0].transcript;
   console.log('Recognized speech: ' + voiceToText);
 
-  fetch('process-voice.php', {
+  fetch('../backend/process-voice.php', {
     method: 'POST',
     headers: {'Content-Type': 'application/x-www-form-urlencoded'},
     body: 'voiceToText=' + encodeURIComponent(voiceToText)

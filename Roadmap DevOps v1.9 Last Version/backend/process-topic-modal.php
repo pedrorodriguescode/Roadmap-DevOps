@@ -1,5 +1,5 @@
 <?php
-  include "connect.php";
+  include "../backend/connect.php";
   header('Content-Type: application/json');
   if (isset($_POST['topic_id'])) {
     $topic_id = intval($_POST['topic_id']);
